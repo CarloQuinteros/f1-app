@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { DriversList } from './DriversList';
 
 interface ApiResponse {
   message: string;
@@ -38,6 +39,10 @@ export default function App() {
             </ul>
           </div>
         </main>
+
+        <section className="mt-12">
+          <DriversList />
+        </section>
       </div>
     </div>
   );

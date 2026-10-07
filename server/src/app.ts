@@ -2,6 +2,7 @@ import express, { Express } from 'express';
 import { errorHandler } from './middleware/errorHandler';
 import { healthRouter } from './routes/health';
 import { sessionsRouter } from './routes/sessions';
+import { driversRouter } from './routes/drivers';
 
 export function createApp(): Express {
   const app = express();
@@ -10,6 +11,7 @@ export function createApp(): Express {
 
   app.use('/api/health', healthRouter);
   app.use('/api/sessions', sessionsRouter);
+  app.use('/api/drivers', driversRouter);
 
   app.use(errorHandler);
 
